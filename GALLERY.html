@@ -1,0 +1,251 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Gallery</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f4f4f4;
+            overflow: auto;
+        }
+
+        header {
+            background-color: #ff9f00;
+            color: #fff;
+            padding: 10px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .logo{
+            display: flex;
+            flex-direction: row;
+            align-items: center;
+        }
+
+        .lgo{
+            width: 100px;
+            height: 100px;
+        }
+
+        .image-logo{
+            align-items: center;
+            justify-content: center;
+            align-items: center;
+            margin-right: 10px;
+            width: 100px;
+
+        }
+
+        .salita{
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+
+        h1 {
+           
+            cursor: pointer;
+            margin-bottom: 5px;
+        }
+
+        h4{
+            margin-top: 0px;
+        }
+        
+        nav ul {
+            list-style: none;
+            margin: 0;
+            padding: 0;
+            display: flex;
+        }
+
+        nav ul li {
+            margin: 0 15px;
+            position: relative;
+        }
+
+        nav ul li a {
+            color: #fff;
+            text-decoration: none;
+            padding: 10px;
+            border-radius: 5px;
+            transition: background-color 0.3s;
+        }
+
+        nav ul li:hover a {
+            background-color: #555;
+        }
+
+        .gallery-container {
+            background-image: linear-gradient(rgba(255 , 255, 255, 0.2), rgba(255, 255, 255, 0.2)), url('TRUE IIEE.png');
+            background-size: cover; /* This property ensures the image covers the entire container */
+            background-repeat: no-repeat;
+            background-position: center;
+            padding: 80px 20px;
+            text-align: center;
+        }
+
+        .image-grid {
+            display: grid;
+            grid-template-columns: repeat(4, 1fr);
+            grid-gap: 20px;
+            margin-top: 20px;
+        }
+
+        .image-card {
+            overflow: hidden;
+            border-radius: 8px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            cursor: pointer;
+            transition: transform 0.3s ease-in-out, filter 0.3s ease-in-out;
+            position: relative;
+            height: 200px; /* Set a fixed height for all image cards */
+        }
+
+        .image-card.enlarged {
+            transform: scale(2);
+            z-index: 2;
+            position: fixed;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            height: auto;
+        }
+
+        .image-card img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+
+        .image-description {
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            width: 98%;
+            background-color: rgba(0, 0, 0, 0.8);
+            padding: 10px;
+            border-radius: 0 0 8px 8px;
+            opacity: 0;
+            transition: opacity 0.3s;
+            color: #fff;
+        }
+
+        .image-card:hover .image-description {
+            opacity: 1;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <div class="logo">
+            <div class="image-logo">
+                <img src="LOGO (2).png" alt="OMSC-COE" id="lgo">
+            </div>
+            <div class="salita">
+                <h2>OCCIDENTAL MINDORO STATE COLLEGE</h2>
+                <h4 id="BSEE">BACHELOR OF SCIENCE IN ELECTRICAL ENGINEERING</h4>
+            </div>
+        </div>
+        <nav>
+            <ul>
+                <li>
+                    <a href="HOME.html">Home</a>
+                </li>
+                <li>
+                    <a href="GALLERY.html">Gallery</a>
+                </li>
+                <li>
+                    <a href="INTRO TO COURSES.html">Introduction to Courses</a>
+                </li>
+                <li>
+                    <a href="CLASS.html">Class Info</a>
+                </li>
+                <li>
+                    <a href="ABOUT US.html">About Us</a>
+                </li>
+            </ul>
+        </nav>
+    </header>
+
+    <div class="gallery-container">
+        <h2>Gallery</h2>
+
+        <div class="image-grid">
+            <!-- Image 1 -->
+            <div class="image-card" onclick="toggleImageSize(this)">
+                <img src="GALLERY PHOTOS/1.png" alt="Image 1">
+                <div class="image-description">Niro Pulgar, Grant Lester Enriquez, Orly Paz Jr.
+                    grabs 1st place at the STIRDC IDEATHON 2023.
+                </div>
+            </div>
+
+            <!-- Image 2 -->
+            <div class="image-card" onclick="toggleImageSize(this)">
+                <img src="GALLERY PHOTOS/2.jpg" alt="Image 2">
+                <div class="image-description">BSEE-OMSC welcome Christmas as they light up the lights.</div>
+            </div>
+
+            <div class="image-card" onclick="toggleImageSize(this)">
+                <img src="IIEE LGO.png" alt="IIEE LOGO">
+                <div class="image-description"> IIEE LOGO-OMSC </div>
+            </div>
+
+            <div class="image-card" onclick="toggleImageSize(this)">
+                <img src="IIEE visits OMSC.jpg" alt="President of IIEE picture with REEs and School President">
+                <div class="image-description">IIEE President visits OMSC</div>
+            </div>
+
+            <div class="image-card" onclick="toggleImageSize(this)">
+                <img src="OMSC joins IIEE-RCSC (COD team).jpg" alt="Image 2">
+                <div class="image-description">OMSC Team For CODM</div>
+            </div>
+            <div class="image-card" onclick="toggleImageSize(this)">
+                <img src="OMSC TAMARAW.jpg" alt="Image 2">
+                <div class="image-description">OMSC Team For MLBB</div>
+            </div>
+            <div class="image-card" onclick="toggleImageSize(this)">
+                <img src="2nd.jpg" alt="Image 2">
+                <div class="image-description">PASSERS FOR QUALIFYIING EXAM 2ND YEAR</div>
+            </div>
+            <div class="image-card" onclick="toggleImageSize(this)">
+                <img src="3rd year.jpg" alt="Image 2">
+                <div class="image-description">PASSERS FOR QUALIFYING EXAM 3RD YEAR</div>
+            </div>
+            <div class="image-card" onclick="toggleImageSize(this)">
+                <img src="/GALLERY PHOTOS/IIEE.jpg" alt="Image 2">
+                <div class="image-description">IIEE officers and teachers pack for the gift giving program</div>
+            </div>
+
+
+            <!-- Add more images as needed -->
+        </div>
+    </div>
+
+    <script>
+        function toggleImageSize(card) {
+            if (card.classList.contains('enlarged')) {
+                // Shrink the image
+                card.classList.remove('enlarged');
+            } else {
+                // Close other enlarged images
+                const enlargedCards = document.querySelectorAll('.enlarged');
+                enlargedCards.forEach(enlargedCard => {
+                    if (enlargedCard !== card) {
+                        enlargedCard.classList.remove('enlarged');
+                    }
+                });
+
+                // Enlarge the clicked image
+                card.classList.add('enlarged');
+            }
+        }
+    </script>
+</body>
+</html>

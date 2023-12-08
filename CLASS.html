@@ -1,0 +1,283 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Class Info</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f4f4f4;
+        }
+
+        header {
+            background-color: #ff9f00;
+            color: #fff;
+            padding: 10px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .logo{
+            display: flex;
+            flex-direction: row;
+            align-items: center;
+        }
+
+        .lgo{
+            width: 100px;
+            height: 100px;
+        }
+
+        .image-logo{
+            align-items: center;
+            justify-content: center;
+            align-items: center;
+            margin-right: 10px;
+            width: 100px;
+
+        }
+
+        .salita{
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+
+        h1 {
+           
+            cursor: pointer;
+            margin-bottom: 5px;
+        }
+
+        h4{
+            margin-top: 0px;
+        }
+
+        nav ul {
+            list-style: none;
+            margin: 0;
+            padding: 0;
+            display: flex;
+        }
+
+        nav ul li {
+            margin: 0 15px;
+            position: relative;
+        }
+
+        nav ul li a {
+            color: #fff;
+            text-decoration: none;
+            padding: 10px;
+            border-radius: 5px;
+            transition: background-color 0.3s;
+        }
+
+        nav ul li:hover a {
+            background-color: #555;
+        }
+
+        .class-info-container {
+            background-image: linear-gradient(rgba(255 , 255, 255, 0.2), rgba(255, 255, 255, 0.2)), url('TRUE IIEE.png');
+            background-size: cover; /* This property ensures the image covers the entire container */
+            background-repeat: no-repeat;
+            background-position: center;
+            padding: 80px 20px;
+            text-align: center;
+        }
+
+        .class-card {
+        
+            background-color: #ffFDD0; /* Adjust the background color as needed */
+            border-radius: 8px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            padding: 20px;
+            margin: 20px;
+            transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
+            cursor: pointer;
+        }
+
+        .class-card:hover {
+            transform: scale(1.05);
+            box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+        }
+
+        .class-card h2 {
+            color: #333;
+        }
+
+        .class-members {
+            list-style: none;
+            padding: 0;
+            margin: 20px 0 0 0;
+        }
+
+        .class-members li {
+            margin: 10px 0;
+            color: #555;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <div class="logo">
+            <div class="image-logo">
+                <img src="LOGO (2).png" alt="OMSC-COE" id="lgo">
+            </div>
+            <div class="salita">
+                <h2>OCCIDENTAL MINDORO STATE COLLEGE</h2>
+                <h4 id="BSEE">BACHELOR OF SCIENCE IN ELECTRICAL ENGINEERING</h4>
+            </div>
+        </div>
+        <nav>
+            <ul>
+                <li>
+                    <a href="HOME.html">Home</a>
+                </li>
+                <li>
+                    <a href="GALLERY.html">Gallery</a>
+                </li>
+                <li>
+                    <a href="INTRO TO COURSES.html">Introduction to Courses</a>
+                </li>
+                <li>
+                    <a href="CLASS.html">Class Info</a>
+                </li>
+                <li>
+                    <a href="ABOUT US.html">About Us</a>
+                </li>
+            </ul>
+        </nav>
+    </header>
+
+    <div class="class-info-container">
+        <h2>Class Information</h2>
+
+        <!-- BSEE 1A Card -->
+        <div class="class-card" onclick="toggleCardSize(this)">
+            <h2>BSEE 1A</h2>
+            <p>Class President: Kaira De Guzman</p>
+            <ul class="class-members">
+                <li>Albert Florence Mazo</li>
+                <li>Alfred Gabriel Guilang</li>
+                <li>Arsenio Corpuz Tolentino</li>
+                <li>Aubrey Cordova Opiaza</li>
+                <li>Celestino Sadiwa</li>
+                <li>Cydric Braganza</li>
+                <li>Dave Maclin Lapuz</li>
+                <li>Denise Zaira Faye Villono</li>
+                <li>Dwayne Jaravata</li>
+                <li>Eldeen Escuadro</li>
+                <li>John Kurt Aguacito</li>
+                <li>John Ralf Arbo</li>
+                <li>Josephine Gabutero</li>
+                <li>Joshua Pastro</li>
+                <li>Kaede Rafael Lomongo</li>
+                <li>Karrychel Lachica Balmes</li>
+                <li>Keena Cortuna</li>
+                <li>Railley Perez</li>
+
+
+                <!-- Add more members as needed -->
+            </ul>
+        </div>
+
+        <!-- BSEE 2A Card -->
+        <div class="class-card" onclick="toggleCardSize(this)">
+            <h2>BSEE 2A</h2>
+            <p>Class President: Nevea Lyka Flores</p>
+            <p>Vice President: Emmanuel Cruz</p>
+            <p>Secretary: Ken Mina</p>
+            <p>Treasurer: Yollyvil Costales</p>
+            <ul class="class-members">
+                <li>Ullysess Joy Mahusay</li>
+                <li>Tristan Yuri Manay</li>
+                <li>Ezekiel Asir</li>
+                <li>Valerie Hagel Tanada</li>
+                <li>Lee-yan Samson</li>
+                <li>Joshua Dejasco</li>
+                <li>Mark Angelo Tariga</li>
+                <li>Jerico Ramos</li>
+                <li>Jericho Alejandro</li>
+                <li>Rio Justine Agustino</li>
+                <li>Alexander Mayabason</li>
+                <li>Karl Ronquillo</li>
+                <li>Jhon Rey Sunga</li>
+                <li>Mac Joeven Ordenes</li>
+                <li>Kdy Mangaoang</li>
+                <li>Anthony Balabis</li>
+                <li>Marc Russel Recio</li>
+                <li>John Rey Elipe</li>
+                <li>Jonash Morro</li>
+                <li>Jeraldine Jaravata</li>
+                <li>Rayian Vic Mactal</li>
+                <li>Sarah Jean Erodias</li>
+                <li>Oshman Padilla</li>
+                
+
+                <!-- Add more members as needed -->
+            </ul>
+        </div>
+
+        <!-- BSEE 3A Card -->
+        <div class="class-card" onclick="toggleCardSize(this)">
+            <h2>BSEE 3A</h2>
+            <p>Class President: Ryan Jay Arsaga</p>
+            <ul class="class-members">
+                <li>Janine Dawn Reyes</li>
+                <li>Jennalyn Abad Resulga</li>
+                <li>Jessa Mae Mina</li>
+                <li>Jessele Mina</li>
+                <li>Michael Jovin Enriquez</li>
+                <li>Noralyn Jaranilla Panganiban</li>
+                <li>John Oliver Balledo</li>
+                <li>Irene Lamique</li>
+                <!-- Add more members as needed -->
+            </ul>
+        </div>
+
+        <!-- BSEE 4A Card -->
+        <div class="class-card" onclick="toggleCardSize(this)">
+            <h2>BSEE 4A</h2>
+            <p>Class President: Cesar Salamance</p>
+            <ul class="class-members">
+                <li>Niro Pulgar</li>
+                <li>Orly Paz Jr</li>
+                <li>Grant Lester Enriquez</li>
+                <li>Stanley Villanueva</li>
+                <li>Francis Charles Sunga</li>
+                <li>Hanes Gutierrez</li>
+                <li>Jay Gabutero</li>
+                <li>Jericho Santorce</li>
+                <li>Kristian Carlo Hernandez</li>
+                
+                <!-- Add more members as needed -->
+            </ul>
+        </div>
+    </div>
+
+    <script>
+        function toggleCardSize(card) {
+            if (card.classList.contains('enlarged')) {
+                // Shrink the card
+                card.classList.remove('enlarged');
+            } else {
+                // Close other enlarged cards
+                const enlargedCards = document.querySelectorAll('.enlarged');
+                enlargedCards.forEach(enlargedCard => {
+                    if (enlargedCard !== card) {
+                        enlargedCard.classList.remove('enlarged');
+                    }
+                });
+
+                // Enlarge the clicked card
+                card.classList.add('enlarged');
+            }
+        }
+    </script>
+</body>
+</html>

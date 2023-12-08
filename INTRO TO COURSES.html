@@ -1,0 +1,550 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Interactive Course Cards</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f4f4f4;
+            color: #333;
+            text-align: center;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            min-height: 100vh;
+        }
+        button{
+            display: none;
+        }
+
+        header {
+            padding: 10px;
+            width: 100%;
+            position: fixed;
+            top: 0;
+            z-index: 1;
+            align-items: center;
+            background-color: #ff9f00;
+            color: #fff;
+            padding: 10px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            margin-bottom: 100 px;
+            
+        }
+        .logo{
+            display: flex;
+            flex-direction: row;
+            align-items: center;
+        }
+
+        .lgo{
+            width: 100px;
+            height: 100px;
+        }
+
+        .image-logo{
+            align-items: center;
+            justify-content: center;
+            align-items: center;
+            margin-right: 10px;
+            width: 100px;
+
+        }
+
+        .salita{
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+
+        h1 {
+           
+            cursor: pointer;
+            margin-bottom: 5px;
+        }
+
+        h4{
+            margin-top: 0px;
+        }
+
+        nav ul {
+            list-style: none;
+            margin: 0;
+            padding: 0;
+            display: flex;
+        }
+
+        nav ul li {
+            margin: 0 15px;
+            position: relative;
+        }
+
+        nav ul li a {
+            color: #fff;
+            text-decoration: none;
+            padding: 10px;
+            border-radius: 5px;
+            transition: background-color 0.3s;
+        }
+
+        nav ul li:hover a {
+            background-color: #555;
+        }
+
+        .courses-container {
+            background-image: linear-gradient(rgba(255 , 255, 255, 0.2), rgba(255, 255, 255, 0.2)), url('TRUE IIEE.png');
+            background-size: cover; /* This property ensures the image covers the entire container */
+            background-repeat: no-repeat;
+            background-position: center;
+            padding-top: 100px;
+            margin-top: 100px;
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+        }
+
+        .course-card {
+            background-color: #fff;
+            border-radius: 8px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            padding: 20px;
+            text-align: left;
+            margin: 20px;
+            width: 300px;
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+            cursor: pointer;
+        }
+
+        .course-card:hover {
+            transform: scale(1.05);
+            box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+        }
+
+        .course-title {
+            margin-bottom: 10px;
+            font-size: 18px;
+        }
+
+        .course-description {
+            list-style: none;
+            padding: 0;
+            text-align: left;
+        }
+
+        .course-description li {
+            margin: 10px 0;
+        }
+
+        .course-card.enlarged {
+            transform: scale(1.2);
+            z-index: 2;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <div class="logo">
+            <div class="image-logo">
+                <img src="LOGO (2).png" alt="OMSC-COE" id="lgo">
+            </div>
+            <div class="salita">
+                <h2>OCCIDENTAL MINDORO STATE COLLEGE</h2>
+                <h4 id="BSEE">BACHELOR OF SCIENCE IN ELECTRICAL ENGINEERING</h4>
+            </div>
+        </div>
+        <nav>
+            <ul>
+                <li>
+                    <a href="HOME.html">Home</a>
+                </li>
+                <li>
+                    <a href="GALLERY.html">Gallery</a>
+                </li>
+                <li>
+                    <a href="INTRO TO COURSES.html">Introduction to Courses</a>
+                </li>
+                <li>
+                    <a href="CLASS.html">Class Info</a>
+                </li>
+                <li>
+                    <a href="ABOUT US.html">About Us</a>
+                </li>
+            </ul>
+        </nav>
+    </header>
+
+    <!-- Course Cards -->
+    <div class="courses-container">
+        <div class="course-card" onclick="enlargeCard(this)">
+            <h3 class="course-title">FILIPINO 1</h3>
+            <ul class="course-description">
+                <li>SUBJECT CODE: LAB0015</li>
+                <li>OMSC CODE: FIL 1</li>
+                <li>UNITS 3</li>
+                <li>TIME: 3 HOURS</li>
+        
+            </ul>
+        </div>
+
+        <div class="course-card" onclick="enlargeCard(this)">
+            <h3 class="course-title">SCIENCE, TECHNOLOGY AND SOCIETY</h3>
+            <ul class="course-description">
+                <li>SUBJECT CODE: LAB 103</li>
+                <li>OMSC CODE: GE 211</li>
+                <li>UNITS: 3</li>
+                <li>TIME: 3 HOURS</li>
+
+            </ul>
+        </div>
+
+        <div class="course-card" onclick="enlargeCard(this)">
+            <h3 class="course-title">PE 3</h3>
+            <ul class="course-description">
+                <li>SUBJECT CODE: LAB 104</li>
+                <li>OMSC CODE: PE 3</li>
+                <li>UNITS 2</li>
+                <li>TIME: 2 HOURS</li>
+
+            </ul>
+        </div>
+
+        <div class="course-card" onclick="enlargeCard(this)">
+            <h3 class="course-title">DIFFERENTIAL EQUATION</h3>
+            <ul class="course-description">
+                <li>SUBJECT CODE: LAB0165</li>
+                <li>OMSC CODE: MATH 211</li>
+                <li>UNITS 3</li>
+                <li>TIME: 3 HOURS</li>
+
+            </ul>
+        </div>
+        <!-- Add more course cards here -->
+        <div class="course-card" onclick="enlargeCard(this)">
+            <h3 class="course-title">LITERATURE 1</h3>
+            <ul class="course-description">
+                <li>SUBJECT CODE: LAB0167</li>
+                <li>OMSC CODE: LIT 1</li>
+                <li>UNITS 3</li>
+                <li>TIME: 3 HOURS</li>
+
+            </ul>
+        </div>
+        <div class="course-card" onclick="enlargeCard(this)">
+            <h3 class="course-title">ENGINEERING MECHANICS</h3>
+            <ul class="course-description">
+                <li>SUBJECT CODE: LAB0168</li>
+                <li>OMSC CODE: CAE 211</li>
+                <li>UNITS 3</li>
+                <li>TIME: 3 HOURS</li>
+
+            </ul>
+        </div>
+        <div class="course-card" onclick="enlargeCard(this)">
+            <h3 class="course-title">ELECTRICAL CIRCUITS 1</h3>
+            <ul class="course-description">
+                <li>SUBJECT CODE: LAB0169</li>
+                <li>OMSC CODE: EE 211</li>
+                <li>UNITS 3</li>
+                <li>TIME: 3 HOURS</li>
+
+            </ul>
+        </div>
+        <div class="course-card" onclick="enlargeCard(this)">
+            <h3 class="course-title">INFORMATION TECHNOLOGY</h3>
+            <ul class="course-description">
+                <li>SUBJECT CODE: LAB0170</li>
+                <li>OMSC CODE: CAE 212</li>
+                <li>UNITS 3</li>
+                <li>TIME: 3 HOURS</li>
+
+            </ul>
+        </div>
+        <div class="course-card" onclick="enlargeCard(this)">
+            <h3 class="course-title">FLUID MECHANICS</h3>
+            <ul class="course-description">
+                <li>SUBJECT CODE: LAB0171</li>
+                <li>OMSC CODE: CAE 213</li>
+                <li>UNITS 2</li>
+                <li>TIME: 2 HOURS</li>
+
+            </ul>
+        </div>
+        <div class="course-card" onclick="enlargeCard(this)">
+            <h3 class="course-title">ENGINEERING ECONOMICS</h3>
+            <ul class="course-description">
+                <li>SUBJECT CODE: LAB0184</li>
+                <li>OMSC CODE: EE 225</li>
+                <li>UNITS 3</li>
+                <li>TIME: 3 HOURS</li>
+
+            </ul>
+        </div>
+        <div class="course-card" onclick="enlargeCard(this)">
+            <h3 class="course-title">PURPOSIVE COMMUNICATION</h3>
+            <ul class="course-description">
+                <li>SUBJECT CODE: LAB0185</li>
+                <li>OMSC CODE: GE 212</li>
+                <li>UNITS 3</li>
+                <li>TIME: 3 HOURS</li>
+            </ul>
+        </div>
+        <div class="course-card" onclick="enlargeCard(this)">
+            <h3 class="course-title">NUMERICAL METHODS AND ANALYSIS</h3>
+            <ul class="course-description">
+                <li>SUBJECT CODE: LAB0186</li>
+                <li>OMSC CODE: CAE311</li>
+                <li>UNITS 3</li>
+                <li>TIME: 2 HOURS</li>
+            </ul>
+        </div>
+        <div class="course-card" onclick="enlargeCard(this)">
+            <h3 class="course-title">LOGIC CIRCUITS AND SWITCHING THEORY</h3>
+            <ul class="course-description">
+                <li>SUBJECT CODE:   LAB0187</li>
+                <li>OMSC CODE: CAE 312</li>
+                <li>UNITS 3</li>
+                <li>TIME: 2 HOURS</li>
+            </ul>
+        </div>
+        <div class="course-card" onclick="enlargeCard(this)">
+            <h3 class="course-title">INDUSTRIAL ELECTRONICS</h3>
+            <ul class="course-description">
+                <li>SUBJECT CODE: LAB0188</li>
+                <li>OMSC CODE: CAE 313</li>
+                <li>UNITS 4</li>
+                <li>TIME: 3 HOURS</li>
+            </ul>
+        </div>
+        <div class="course-card" onclick="enlargeCard(this)">
+            <h3 class="course-title">FUNDAMENNTALS OF ELECTRONIC COMMUNICATION</h3>
+            <ul class="course-description">
+                <li>SUBJECT CODE: LAB0189/li>
+                <li>OMSC CODE: CAE 314</li>
+                <li>UNITS 3</li>
+                <li>TIME: 3 HOURS</li>
+            </ul>
+        </div>
+        <div class="course-card" onclick="enlargeCard(this)">
+            <h3 class="course-title">ELECTRICAL MACHINES 1</h3>
+            <ul class="course-description">
+                <li>SUBJECT CODE: LAB 0190</li>
+                <li>OMSC CODE: EE 311</li>
+                <li>UNITS 3</li>
+                <li>TIME: 2 HOURS</li>
+            </ul>
+        </div>
+        <div class="course-card" onclick="enlargeCard(this)">
+            <h3 class="course-title">ENVIRONMENT SCIENCE AND ENGINEERING</h3>
+            <ul class="course-description">
+                <li>SUBJECT CODE: LAB0191</li>
+                <li>OMSC CODE: CAE 315</li>
+                <li>UNITS 2</li>
+                <li>TIME: 2 HOURS</li>
+            </ul>
+        </div>
+        <div class="course-card" onclick="enlargeCard(this)">
+            <h3 class="course-title">MATERIAL SCIENCE AND ENGINEERING</h3>
+            <ul class="course-description">
+                <li>SUBJECT CODE: LAB0200</li>
+                <li>OMSC CODE: CAE 411</li>
+                <li>UNITS 2</li>
+                <li>TIME: 2 HOURS</li>
+                
+            </ul>
+        </div>
+        <div class="course-card" onclick="enlargeCard(this)">
+            <h3 class="course-title">ELECTRICAL STANDARDS AND PRACTICES</h3>
+            <ul class="course-description">
+                <li>SUBJECT CODE: LAB0201</li>
+                <li>OMSC CODE: EE 411</li>
+                <li>UNITS 1</li>
+                <li>TIME: 3 HOURS</li>
+            </ul>
+        </div>
+        <div class="course-card" onclick="enlargeCard(this)">
+            <h3 class="course-title">ELECTRICAL SYSYEM, DESIGN AND ILLUMINATING ENGINEERING DESIGN</h3>
+            <ul class="course-description">
+                <li>SUBJECT CODE: LAB0202</li>
+                <li>OMSC CODE: EE 412</li>
+                <li>UNITS 5</li>
+                <li>TIME: 3 HOURS</li>
+            </ul>
+        </div>
+        <div class="course-card" onclick="enlargeCard(this)">
+            <h3 class="course-title">EE ELECTIVE 1: TRANSMISSION AND DISTRIBUTION</h3>
+            <ul class="course-description">
+                <li>SUBJECT CODE: LAB0203</li>
+                <li>OMSC CODE: EE 413</li>
+                <li>UNITS 3</li>
+                <li>TIME: 3 HOURS</li>
+            </ul>
+        </div>
+        <div class="course-card" onclick="enlargeCard(this)">
+            <h3 class="course-title">INSTRUMENTATION AND CONTROL</h3>
+            <ul class="course-description">
+                <li>SUBJECT CODE: LAB0204</li>
+                <li>OMSC CODE: EE 414</li>
+                <li>UNITS 3</li>
+                <li>TIME: 2 HOURS</li>
+            </ul>
+        </div>
+        <div class="course-card" onclick="enlargeCard(this)">
+            <h3 class="course-title">RESEARCH PROJECT</h3>
+            <ul class="course-description">
+                <li>SUBJECT CODE: LAB0205</li>
+                <li>OMSC CODE: EE 415</li>
+                <li>UNITS 1</li>
+                <li>TIME: 3 HOURS</li>
+            </ul>
+        </div>
+        <div class="course-card" onclick="enlargeCard(this)">
+            <h3 class="course-title">FUNDAMENTALS OF POWERPLANT ENGINEERING DESIGN</h3>
+            <ul class="course-description">
+                <li>SUBJECT CODE: LAB0206</li>
+                <li>OMSC CODE: EE 416</li>
+                <li>UNITS 1</li>
+                <li>TIME: N/A HOURS</li>
+            </ul>
+        </div>
+        <div class="course-card" onclick="enlargeCard(this)">
+            <h3 class="course-title">THERMODYNAMICS</h3>
+            <ul class="course-description">
+                <li>SUBJECT CODE: LAB0246</li>
+                <li>OMSC CODE: CAE 211</li>
+                <li>UNITS 3</li>
+                <li>TIME: 3 HOURS</li>
+            </ul>
+        </div>
+        <div class="course-card" onclick="enlargeCard(this)">
+            <h3 class="course-title">BASIC CALCULUS</h3>
+            <ul class="course-description">
+                <li>SUBJECT CODE: LAB5679</li>
+                <li>OMSC CODE: ***BR01</li>
+                <li>UNITS 3</li>
+                <li>TIME: 3 HOURS</li>
+            </ul>
+        </div>
+        <div class="course-card" onclick="enlargeCard(this)">
+            <h3 class="course-title">GENERAL CHEMISTRY</h3>
+            <ul class="course-description">
+                <li>SUBJECT CODE: LAB5680</li>
+                <li>OMSC CODE: ***BR02</li>
+                <li>UNITS 3</li>
+                <li>TIME: 3 HOURS</li>
+            </ul>
+        </div>
+        <div class="course-card" onclick="enlargeCard(this)">
+            <h3 class="course-title">COLLEGE ALGEBRA</h3>
+            <ul class="course-description">
+                <li>SUBJECT CODE: LAB5681</li>
+                <li>OMSC CODE: MATH 111</li>
+                <li>UNITS 3</li>
+                <li>TIME: 3 HOURS</li>
+            </ul>
+        </div>
+        <div class="course-card" onclick="enlargeCard(this)">
+            <h3 class="course-title">CALCULUS 1: DIFFERENTIAL CALCULUS</h3>
+            <ul class="course-description">
+                <li>SUBJECT CODE: LAB5682</li>
+                <li>OMSC CODE: MATH 112</li>
+                <li>UNITS 3</li>
+                <li>TIME: 3 HOURS</li>
+            </ul>
+        </div>
+        <div class="course-card" onclick="enlargeCard(this)">
+            <h3 class="course-title">ENGINEERING DRAWING</h3>
+            <ul class="course-description">
+                <li>SUBJECT CODE: LAB5683</li>
+                <li>OMSC CODE: CAE 111</li>
+                <li>UNITS 1</li>
+                <li>TIME: 3 HOURS</li>
+            </ul>
+        </div>
+        <div class="course-card" onclick="enlargeCard(this)">
+            <h3 class="course-title">CHEMISTRY FOR ENGINEERS</h3>
+            <ul class="course-description">
+                <li>SUBJECT CODE: LAB5684</li>
+                <li>OMSC CODE: CAE 112</li>
+                <li>UNITS 3</li>
+                <li>TIME: 3 HOURS</li>
+            </ul>
+        </div>
+        <div class="course-card" onclick="enlargeCard(this)">
+            <h3 class="course-title">MATHEMATICS IN THE MODERN WORLD</h3>
+            <ul class="course-description">
+                <li>SUBJECT CODE:</li>
+                <li>OMSC CODE:</li>
+                <li>UNITS 3</li>
+                <li>TIME: 3 HOURS</li>
+            </ul>
+        </div>
+        <div class="course-card" onclick="enlargeCard(this)">
+            <h3 class="course-title">READINGS IN PHILIPPINE HISTORY</h3>
+            <ul class="course-description">
+                <li>SUBJECT CODE: LAB5685</li>
+                <li>OMSC CODE: GE01</li>
+                <li>UNITS 3</li>
+                <li>TIME: 3 HOURS</li>
+            </ul>
+        </div>
+        <div class="course-card" onclick="enlargeCard(this)">
+            <h3 class="course-title">COMPUTER PROGRAMMING</h3>
+            <ul class="course-description">
+                <li>SUBJECT CODE: LAB5687</li>
+                <li>OMSC CODE: CAE 113</li>
+                <li>UNITS 3</li>
+                <li>TIME: 3 HOURS</li>
+            </ul>
+        </div>
+        <div class="course-card" onclick="enlargeCard(this)">
+            <h3 class="course-title">ELECTRICAL WORKSHOP 1: BUILDING WIRING</h3>
+            <ul class="course-description">
+                <li>SUBJECT CODE: LAB5688</li>
+                <li>OMSC CODE: EE 111</li>
+                <li>UNITS 1</li>
+                <li>TIME: 3 HOURS</li>
+            </ul>
+        </div>
+        <div class="course-card" onclick="enlargeCard(this)">
+            <h3 class="course-title">MOVEMENT COMPETENCY TRAINING</h3>
+            <ul class="course-description">
+                <li>SUBJECT CODE: LAB5689</li>
+                <li>OMSC CODE: PathFit 1</li>
+                <li>UNITS 3</li>
+                <li>TIME: 3 HOURS</li>
+            </ul>
+        </div>
+        <div class="course-card" onclick="enlargeCard(this)">
+            <h3 class="course-title">CIVIL WELFARE TRAINING AND SERVICES 1</h3>
+            <ul class="course-description">
+                <li>SUBJECT CODE: LAB5690</li>
+                <li>OMSC CODE: NSTP 1</li>
+                <li>UNITS 3</li>
+                <li>TIME: 3 HOURS</li>
+            </ul>
+        </div>
+       
+
+    </div>
+    <!-- End of Course Cards -->
+
+    <body onload="showAlert()"></body>
+    <script>
+        function enlargeCard(card) {
+            card.classList.toggle("enlarged");
+        }
+
+        function showAlert() {
+        alert('These courses are for the current semester only.');
+    }
+    </script>
+
+</body>
+</html>
